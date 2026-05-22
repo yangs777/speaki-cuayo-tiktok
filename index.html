@@ -4,41 +4,125 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Speaki Cuayo Publisher</title>
+  <meta name="description" content="Speaki Cuayo Publisher helps creators prepare, review, and publish short-form videos to connected social channels.">
   <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f3ee;
+      --ink: #202124;
+      --muted: #5f6368;
+      --line: #ddd4ca;
+      --panel: #fffaf3;
+      --accent: #6d3df5;
+    }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
-      color: #202124;
-      background: #f7f3ee;
+      color: var(--ink);
+      background: var(--bg);
     }
     main {
-      max-width: 760px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 48px 20px;
+      padding: 56px 20px;
     }
     h1 {
-      margin: 0 0 16px;
-      font-size: 2rem;
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-top: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    p {
+      max-width: 760px;
     }
     a {
-      color: #6d3df5;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--panel);
+    }
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
   <main>
     <h1>Speaki Cuayo Publisher</h1>
-    <p>
-      This private creator tool helps the Speaki Cuayo channel owner prepare
-      and publish short-form videos to TikTok.
+    <p class="lead">
+      A web-based publishing assistant for creators who prepare original
+      short-form videos and publish them to connected social channels.
     </p>
+    <p>
+      Speaki Cuayo Publisher helps approved creators organize short videos,
+      review captions and metadata, and send selected content to platforms
+      such as TikTok, Instagram, and X after the creator authorizes the
+      connection through each platform's official login flow.
+    </p>
+
+    <div class="grid" aria-label="Service features">
+      <div class="item">
+        <strong>Creator-controlled publishing</strong>
+        Videos are selected by the creator before they are uploaded or
+        prepared as a draft for review.
+      </div>
+      <div class="item">
+        <strong>Connected account authorization</strong>
+        The service uses OAuth permissions requested only for account
+        identification and content publishing.
+      </div>
+      <div class="item">
+        <strong>Short-form workflow</strong>
+        Captions, hashtags, posting options, and publishing records are kept
+        focused on creator video workflows.
+      </div>
+    </div>
+
+    <h2>Legal and support links</h2>
     <p>
       <a href="./terms.html">Terms of Service</a><br>
       <a href="./privacy.html">Privacy Policy</a><br>
-      <a href="./data-deletion.html">Data Deletion Instructions</a><br>
-      <a href="./meta/callback/">Meta OAuth Callback</a>
+      <a href="./data-deletion.html">Data Deletion Instructions</a>
     </p>
+
+    <h2>Authorization callbacks</h2>
+    <p>
+      These pages support OAuth redirects for creators who connect accounts:
+      <a href="./tiktok/callback/">TikTok Callback</a>,
+      <a href="./tiktok/callback/desktop/">TikTok Desktop Callback</a>, and
+      <a href="./meta/callback/">Meta Callback</a>.
+    </p>
+
+    <footer>
+      Contact: <a href="mailto:yangs77771@gmail.com">yangs77771@gmail.com</a>
+    </footer>
   </main>
 </body>
 </html>
