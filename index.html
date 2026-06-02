@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Speaki Cuayo Publisher</title>
-  <meta name="description" content="Speaki Cuayo Publisher helps creators prepare, review, and publish short-form videos to connected social channels.">
+  <title>Speaki Cuayo Publisher and YouTube API Tools</title>
+  <meta name="description" content="Speaki Cuayo Publisher helps creators prepare short-form videos and manage authorized YouTube channel metadata, localizations, and comment replies.">
   <style>
     :root {
       color-scheme: light;
@@ -77,14 +77,17 @@
   <main>
     <h1>Speaki Cuayo Publisher</h1>
     <p class="lead">
-      A web-based publishing assistant for creators who prepare original
-      short-form videos and publish them to connected social channels.
+      A web-based publishing assistant and owner-operated YouTube API toolset
+      for creators who prepare original short-form videos, maintain channel
+      metadata, manage localizations, and review creator replies.
     </p>
     <p>
       Speaki Cuayo Publisher helps approved creators organize short videos,
-      review captions and metadata, and send selected content to platforms
-      such as TikTok, Instagram, and X after the creator authorizes the
-      connection through each platform's official login flow.
+      review captions and metadata, and send selected content to connected
+      platforms after the creator authorizes each connection through the
+      platform's official login flow. For YouTube, the owner-operated workflow
+      uses the official YouTube Data API to maintain the Speaki Cuayo channel,
+      update metadata and localizations, and manage approved creator replies.
     </p>
 
     <div class="grid" aria-label="Service features">
@@ -97,6 +100,11 @@
         <strong>Connected account authorization</strong>
         The service uses OAuth permissions requested only for account
         identification and content publishing.
+      </div>
+      <div class="item">
+        <strong>YouTube API maintenance</strong>
+        YouTube access is used for owner-authorized channel metadata,
+        localizations, comment triage, and approved creator replies.
       </div>
       <div class="item">
         <strong>Short-form workflow</strong>
@@ -117,7 +125,9 @@
       These pages support OAuth redirects for creators who connect accounts:
       <a href="./tiktok/callback/">TikTok Callback</a>,
       <a href="./tiktok/callback/desktop/">TikTok Desktop Callback</a>, and
-      <a href="./meta/callback/">Meta Callback</a>.
+      <a href="./meta/callback/">Meta Callback</a>. YouTube authorization is
+      handled through Google's official OAuth flow and the public policy pages
+      linked above.
     </p>
 
     <footer>
